@@ -18,6 +18,12 @@
   --primary-text-style: 'Roboto', sans-serif;
 }
 
+.outer {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
   background: var(--primary-bg-color);
   color: var(--primary-text-color);
@@ -53,18 +59,18 @@ body {
 
   padding: 0 15px;
 
-  /* outline: 2px solid blueviolet; */
+  outline: 2px solid blueviolet;
 }
 
 /* header */
 
 .header-section {
   background-color: #ffffff;
-  border-bottom: 1px solid #ececec;
+  /* border-bottom: 1px solid #ececec; */
 }
 .container-header-flex {
-  align-items: center;
   display: flex;
+  align-items: center;
 }
 /* .container-header-flex > ul {
   margin-left: 331px;
@@ -121,7 +127,30 @@ body {
 .link.current {
   color: var(--accent-color);
 }
+.mail-item::before {
+  display: inline-flex;
+  margin-right: 10px;
+  width: 16px;
+  height: 12px;
+  background-repeat: no-repeat;
+  content: '';
+  background-size: contain;
+  background-position: center;
+  background-image: url(../image/envelope-hover.svg);
+}
 
+.tel-item::before {
+  display: inline-flex;
+
+  margin-right: 10px;
+  width: 10px;
+  height: 16px;
+  background-repeat: no-repeat;
+  content: '';
+  background-size: contain;
+  background-position: center;
+  background-image: url(../image/smartphone.svg);
+}
 /* logo  */
 
 .logo-link {
@@ -150,9 +179,10 @@ body {
 
 .section-hero {
   /* margin-bottom: 94px; */
-  /* width: 1600px;
+  border-top: 1px solid #ececec;
+  width: 1600px;
   margin-left: auto;
-  margin-right: auto; */
+  margin-right: auto;
   margin-bottom: 94px;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -177,6 +207,7 @@ body {
   /* background-position: 50px 0; */
   /* background-position: 0 20px ; */
   /* outline: 1px solid coral; */
+  /* outline: 2px solid blueviolet; */
   /*  */
 }
 .container.hero {
@@ -199,6 +230,10 @@ body {
 /* button hero */
 
 .hero-button {
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border: 0;
   padding: 10px 32px;
   border-radius: 4px;
@@ -213,7 +248,6 @@ body {
   font-size: 16px;
   line-height: 1.87;
 
-  display: inline-block;
   /* display: flex;
   align-items: center; */
   /* text-align: center; */
@@ -257,6 +291,31 @@ body {
 }
 .feature-list li:not(:last-child) {
   margin-right: 30px;
+}
+
+.feature-item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+}
+
+.feature-item:nth-child(1)::before {
+  background-image: url(../image/antenna-1.svg);
+}
+
+.feature-item:nth-child(2)::before {
+  background-image: url(../image/clock-1.svg);
+}
+.ikon-diagram::before {
+  background-image: url(../image/diagram-1.svg);
+}
+.ikon-astronaut::before {
+  background-image: url(../image/astronaut-1.svg);
 }
 
 /* workpage  */
