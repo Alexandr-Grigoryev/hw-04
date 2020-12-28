@@ -64,7 +64,7 @@ body {
 
   padding: 0 15px;
 
-  outline: 2px solid blueviolet;
+  /* outline: 2px solid blueviolet; */
 }
 
 /* header */
@@ -325,27 +325,12 @@ body {
 .feature-list li:not(:last-child) {
   margin-right: 30px;
 }
-.antenna-1-icon {
-  height: 70px;
-  width: 70px;
-}
-.features-antenna-1 {
-  height: 120px;
-  width: 270px;
-  padding: 25px 100px;
-  background-color: #f5f4fa;
-}
-.features-clock-1 {
-  width: 270px;
-  height: 120px;
-  background-color: #f5f4fa;
+.feature-item {
   display: flex;
-  align-items: center;
   justify-content: center;
-}
-.clock-1-icon {
-  height: 70px;
-  width: 70px;
+  align-items: center;
+  height: 120px;
+  background-color: #f5f4fa;
 }
 
 /* .feature-item::before {
@@ -419,7 +404,7 @@ body {
 .team.section p {
   font-size: 16px;
   line-height: 1.19;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   text-align: center;
 }
 
@@ -449,13 +434,14 @@ body {
 .team-flex {
   display: flex;
 }
-.team-flex li {
+.team-flex > li {
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team-flex li:not(:last-child) {
+
+.team-flex > li:not(:last-child) {
   margin-right: 30px;
 }
 .team-flex img {
@@ -466,11 +452,70 @@ body {
 }
 .team-social {
   display: flex;
-  width: 206px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.team-social > li:not(:last-child) {
+  margin-right: 10px;
+}
+.social-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.social-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50px;
+  background-color: var(--primary-bg-color);
+  fill: #afb1b8;
+}
+.social-item:hover,
+.social-item:focus {
+  background-color: var(--accent-color);
+  fill: #ffffff;
+}
+/* clietnts */
+
+.clients-list {
+  display: flex;
+  padding-bottom: 50px;
+}
+.clients-title {
+  margin-top: 0;
+  padding-top: 92px;
+  margin-bottom: 50px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  color: var(--title-text-clolr);
+}
+
+.client-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+}
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 /* portfolio */
-/* projects */
-/* button filter */
 
 .button-filter {
   min-width: 73px;
@@ -543,14 +588,17 @@ body {
 .portfolio-projects-flex-item {
   margin-right: 30px;
   width: calc((100% - 60px) / 3);
-}
-
-.portfolio-projects-flex-item {
   background: #ffffff;
   border: 1px solid #eeeeee;
   margin-right: 30px;
   margin-bottom: 30px;
 }
+.portfolio-projects-flex-item:hover,
+.portfolio-projects-flex-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-projects-flex-item:nth-child(3n) {
   margin-right: 0;
 }
@@ -594,6 +642,12 @@ body {
   padding: 60px 0 0;
   background-color: #2f303a;
   display: block;
+}
+.container-flex {
+  display: flex;
+}
+.address {
+  margin-right: 70px;
 }
 
 .footer-logo-link {
@@ -639,4 +693,42 @@ body {
   line-height: 1.7;
 
   color: rgba(255, 255, 255, 0.6);
+}
+.address-social {
+  width: 206px;
+  padding-top: 12px;
+}
+.footer-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.footer-social-list {
+  display: flex;
+}
+.footer-social-list > li:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-social-item {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  fill: #ffffff;
+}
+.footer-social-item:hover,
+.footer-social-item:focus {
+  background: var(--accent-color);
+}
+.footer-social-icon {
+  width: 20px;
+  height: 20px;
 }
