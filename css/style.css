@@ -22,11 +22,11 @@
   margin-left: auto;
   margin-right: auto;
 }
-.outer-portfolio {
+/* .outer-portfolio {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 body {
   background: var(--primary-bg-color);
   color: var(--primary-text-color);
